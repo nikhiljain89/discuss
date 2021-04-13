@@ -1,0 +1,74 @@
+
+.comment {
+    justify-content: space-between;
+  }
+  
+  .comment__wrapper {
+    align-items: center;
+      display: flex;
+      flex-basis: 80%;
+      min-width: 80%;
+  
+      .user-img {
+        height: 2.75rem;
+        width: 2.75rem;
+      }
+  }
+  
+  .comment__details {
+    font-size: 0.75rem;
+    margin: 0.25rem 0 0 0;
+  }
+  
+  .comment__actions {
+    flex-basis: 4%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .comment,
+  .reply-comment {
+    align-items: center;
+    display: flex;
+    min-height: 4rem;
+  
+    &__wrapper {
+      @extend .comment__wrapper;
+    }
+    &__details__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &__details {
+      @extend .comment__details;
+    }
+  
+    &__actions {
+      @extend .comment__actions
+    }
+  }
+  
+  .reply-comment {
+    background-color: rgba(0, 0, 0, 0.03);
+    min-height: 3rem;
+    margin: 0 0 0 0.5rem;
+    padding: 0 0.5rem;
+  
+    &__wrapper {
+      @extend .comment__wrapper;
+      flex-basis: 84%;
+      min-width: 84%;
+    }
+  
+    &__details {
+      @extend .comment__details;
+      margin: 0.25rem 0 0 0;
+    }
+  
+    &__actions {
+      display: flex;
+      flex-basis: 16%;
+      justify-content: flex-end;
+    }
+  }
+  

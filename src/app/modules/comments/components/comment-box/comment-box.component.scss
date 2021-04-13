@@ -1,0 +1,12 @@
+.comment-box-form {
+  align-items: flex-start;
+  justify-content: space-between;
+  .comment-box {
+    flex-basis: 785px;
+    min-width: 84%;
+
+    textarea {
+      width: 100%;
+    }
+  }
+}

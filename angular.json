@@ -11,7 +11,7 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "",
       "prefix": "app",
       "architect": {
         "build": {
@@ -24,11 +24,31 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "favicon.ico",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              {
+                "inject": false,
+                "input": "src/assets/themes/light-theme.scss",
+                "bundleName": "light-theme"
+              },
+              {
+                "inject": false,
+                "input": "src/assets/themes/dark-theme.scss",
+                "bundleName": "dark-theme"
+              },
+              {
+                "input": "src/styles.scss"
+              }
             ],
             "scripts": []
           },

@@ -1,0 +1,61 @@
+[
+    {
+        "comment": "This is my first comment",
+        "id": 1122,
+        "count": 1,
+        "currentDate": "2021-04-10T23:28:56.782Z",
+        "replyComment": [
+            {
+                "comment": "This is my reply comment",
+                "id": 1221,
+                "count": 1,
+                "currentDate": "2021-04-10T23:28:56.782Z",
+                "user": "NIkhil Jain"
+            },
+            {
+                "comment": "This is my reply comment",
+                "id": 2221,
+                "count": 1,
+                "currentDate": "2021-04-10T23:28:56.782Z",
+                "user": "Nikhil Jain"
+            }
+        ],
+        "user": "Maria Bob",
+        "photo": "https://img.icons8.com/bubbles/50/000000/user-female.svg"
+    },
+    {
+        "comment": "This is my second comment",
+        "id": 1124,
+        "count": 1,
+        "currentDate": "2021-04-11T23:28:56.782Z",
+        "replyComment": [
+            {
+                "comment": "This is my reply comment",
+                "id": 4221,
+                "count": 1,
+                "currentDate": "2021-04-10T23:28:56.782Z",
+                "user": "Nikhil Jain",
+                "photo": "assets/images/user-male.svg"
+            },
+            {
+                "comment": "This is my reply comment",
+                "id": 5221,
+                "count": 1,
+                "currentDate": "2021-04-10T23:28:56.782Z",
+                "user": "Nikhil Jain",
+                "photo": "assets/images/user-male.svg"
+            }
+        ],
+        "user": "Nikhil Jain",
+        "photo": "assets/images/user-male.svg"
+    },
+    {
+        "comment": "This is my reply comment",
+        "id": 1190,
+        "count": 1,
+        "currentDate": "2021-04-11T23:28:56.782Z",
+        "replyComment": [],
+        "user": "Nikhil Jain",
+        "photo": "assets/images/user-male.svg"
+    }
+]

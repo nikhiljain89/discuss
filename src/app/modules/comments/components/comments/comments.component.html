@@ -1,0 +1,44 @@
+<ul class="list-group list-group-flush" *ngIf="postComment">
+    <li class="list-group-item" *ngFor="let post of postComment; let i = index;">
+        <div class="comment">
+            <div class="comment__wrapper">
+                <img class="user-img" [src]="post.photo" />
+                <div class="comment__details__wrapper">
+                    {{ post.comment}}
+                    <span class="comment__details">By:
+                        <a href="#">
+                            {{post?.user }}
+                        </a> on {{ post.currentDate | date: 'dd/MM/yyyy' }}</span>
+                </div>
+            </div>
+            <div class="comment__actions">
+                <button class="icon" title="Reply" aria-label="Reply To Comment" (click)="replyComment(i)">
+                    <i class="fa fa-reply"></i>
+                </button>
+                <button class="icon" title="Delete" aria-label="Delete Comment" (click)="removeComment(i)">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </div>
+        </div>
+        <ul *ngIf="!!post?.replyComment?.length" class="list-group list-group-flush">
+            <li class="list-group-item reply-comment" *ngFor="let reply of post?.replyComment; let j = index">
+                <div class="reply-comment__wrapper">
+                    <img *ngIf="reply?.photo" class="user-img" [src]="reply.photo" />
+                    <div class="comment__details__wrapper">
+                        {{ reply?.comment}}
+                        <span class="reply-comment__details">By:
+                            <a href="#">{{reply?.user}}</a>
+                            {{ reply?.currentDate| date: 'dd/MM/yyyy' }}
+                        </span>
+                    </div>
+                </div>
+                <div class="reply-comment__actions">
+                    <button class="icon" title="Delete" aria-label="Delete Reply" (click)="removeReplyComment(post, j)">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+        <app-comments-container></app-comments-container>
+    </li>
+</ul>
